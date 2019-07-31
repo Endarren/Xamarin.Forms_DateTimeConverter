@@ -6,6 +6,10 @@ public class DateTimeToStringConverter: IValueConverter
 	{
 		if (value is DateTime dateTime)
 		{
+			if (dateTime == null)
+			{
+				return "";
+			}
 			if (parameter is string pattern)
 			{
 				return dateTime.ToString(pattern);
