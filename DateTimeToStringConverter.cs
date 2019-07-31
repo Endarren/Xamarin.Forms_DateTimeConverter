@@ -20,6 +20,7 @@ public class DateTimeToStringConverter: IValueConverter
 			}
 
 		}
+		return "";
 	}
 	public virtual object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 	{
