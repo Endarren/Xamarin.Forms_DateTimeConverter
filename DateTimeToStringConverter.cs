@@ -18,7 +18,21 @@ public class DateTimeToStringConverter: IValueConverter
 			{
 				return dateTime.ToString();
 			}
-
+		}
+		else if (value is TimeSpan timeSpan)
+		{
+			if (timeSpan == null)
+			{
+				return "";
+			}
+			if (parameter is string pattern)
+			{
+				return timeSpan.ToString(pattern);
+			}
+			else
+			{
+				return timeSpan.ToString();
+			}
 		}
 		return "";
 	}
